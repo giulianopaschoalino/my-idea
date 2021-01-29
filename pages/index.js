@@ -1,40 +1,38 @@
 import Link from "next/link";
 import Head from "next/head";
 
-function Home() {
+export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Home 2 de Giuliano</title>
-
-        <Link rel="icon" href="/favicon.ico"></Link>
+        <title>Home - Giuliano</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Bem-vindo ao <br></br><a>Meu Site Pessoal</a>
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          <code>made by</code> Giuliano <code>Stofella</code> Paschoalino
         </p>
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <h3>Documentação &rarr;</h3>
+            <p>Encontre informações mais detalhadas sobre as features do Next.js e API.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <h3>Aprender &rarr;</h3>
+            <p>Aprenda sobre Next.js em um curso interativo com quizzes!</p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className="card"
           >
-            <h3>Examples &rarr;</h3>
+            <h3>Exemplos &rarr;</h3>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
@@ -52,12 +50,12 @@ function Home() {
 
       <footer>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://stofella.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+          Proporcionado por {" "}
+          <img src="/logo.png" alt="Logo de Giuliano" className="logo" />
         </a>
       </footer>
 
@@ -69,7 +67,9 @@ function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-image: linear-gradient(to bottom right, #ffd89b , #19547b);
         }
+
         main {
           padding: 5rem 0;
           flex: 1;
@@ -78,64 +78,86 @@ function Home() {
           justify-content: center;
           align-items: center;
         }
+
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
+          border-top: 2px solid #0f0f0f;
           display: flex;
           justify-content: center;
           align-items: center;
         }
+
         footer img {
           margin-left: 0.5rem;
         }
+
         footer a {
           display: flex;
           justify-content: center;
           align-items: center;
         }
+
         a {
           color: inherit;
           text-decoration: none;
         }
+
         .title a {
-          color: #0070f3;
-          text-decoration: none;
+          color: #19547b;
+          display: inline-block;
         }
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
+
+        .title a::after {
+          content: '';
+          width: 0px;
+          height: 6px;
+          display: block;
+          background: #19547b;
+          transition: 300ms;
         }
+        
+        .title a:hover::after {
+          width: 100%;
+        }
+
         .title {
           margin: 0;
           line-height: 1.15;
           font-size: 4rem;
         }
+
         .title,
         .description {
           text-align: center;
         }
+
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
         }
+
         code {
           background: #fafafa;
           border-radius: 5px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           padding: 0.75rem;
-          font-size: 1.1rem;
+          font-size: 1.4rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
+
         .grid {
           display: flex;
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-          max-width: 800px;
+
+          max-height: 1000px;
+          max-width: 1000px;
           margin-top: 3rem;
         }
+
         .card {
           margin: 1rem;
           flex-basis: 45%;
@@ -145,26 +167,31 @@ function Home() {
           text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
+          transition: color 0.5s ease, border-color 0.5s ease;
         }
+
         .card:hover,
         .card:focus,
         .card:active {
           color: #0070f3;
           border-color: #0070f3;
         }
+
         .card h3 {
           margin: 0 0 1rem 0;
           font-size: 1.5rem;
         }
+
         .card p {
           margin: 0;
           font-size: 1.25rem;
           line-height: 1.5;
         }
+
         .logo {
-          height: 1em;
+          height: 1.2em;
         }
+
         @media (max-width: 600px) {
           .grid {
             width: 100%;
@@ -182,6 +209,7 @@ function Home() {
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
         }
+
         * {
           box-sizing: border-box;
         }
@@ -189,5 +217,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
