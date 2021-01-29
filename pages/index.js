@@ -10,7 +10,8 @@ export default function Home() {
       </Head>
       <main>
         <h1 className="title">
-          Bem-vindo ao <br></br><a>Meu Site Pessoal</a>
+          Bem-vindo ao <br></br>
+          <a>Meu Site Pessoal</a>
         </h1>
 
         <p className="description">
@@ -20,7 +21,10 @@ export default function Home() {
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentação &rarr;</h3>
-            <p>Encontre informações mais detalhadas sobre as features do Next.js e API.</p>
+            <p>
+              Encontre informações mais detalhadas sobre as features do Next.js
+              e API.
+            </p>
           </a>
 
           <a href="https://nextjs.org/learn" className="card">
@@ -28,21 +32,19 @@ export default function Home() {
             <p>Aprenda sobre Next.js em um curso interativo com quizzes!</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Exemplos &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="#" className="card">
+            <h3>Sobre &rarr;</h3>
+            <p>Em breve...</p>
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://github.com/giulianopaschoalino?tab=repositories"
+            target="_blank"
             className="card"
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>GitHub &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Mais projetos feitos por mim! <br></br>:)
             </p>
           </a>
         </div>
@@ -54,7 +56,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Proporcionado por {" "}
+          Proporcionado por{" "}
           <img src="/logo.png" alt="Logo de Giuliano" className="logo" />
         </a>
       </footer>
@@ -67,7 +69,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-image: linear-gradient(to bottom right, #ffd89b , #19547b);
+          background-image: linear-gradient(to bottom right, #ffd89b, #19547b);
         }
 
         main {
@@ -80,9 +82,9 @@ export default function Home() {
         }
 
         footer {
-          width: 100%;
+          width: 80%;
           height: 100px;
-          border-top: 2px solid #0f0f0f;
+          border-top: 2px solid rgba(255, 255, 255, 0.25);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -99,7 +101,7 @@ export default function Home() {
         }
 
         a {
-          color: inherit;
+          color: #eaeaea;
           text-decoration: none;
         }
 
@@ -109,14 +111,14 @@ export default function Home() {
         }
 
         .title a::after {
-          content: '';
+          content: "";
           width: 0px;
           height: 6px;
           display: block;
           background: #19547b;
           transition: 300ms;
         }
-        
+
         .title a:hover::after {
           width: 100%;
         }
@@ -140,7 +142,8 @@ export default function Home() {
         code {
           background: #fafafa;
           border-radius: 5px;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
           padding: 0.75rem;
           font-size: 1.4rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
@@ -159,22 +162,48 @@ export default function Home() {
         }
 
         .card {
+          position: relative;
+          display: inline-block;
+          background-image: linear-gradient(to top left, #42275a, #19547b);
+          opacity: 0.6;
           margin: 1rem;
           flex-basis: 45%;
           padding: 1.5rem;
           text-align: left;
-          color: inherit;
+          color: #ffffff;
           text-decoration: none;
-          border: 1px solid #eaeaea;
+          border: 1px solid #0070f3;
           border-radius: 10px;
-          transition: color 0.5s ease, border-color 0.5s ease;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .card::after {
+          content: "";
+          border-radius: 5px;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          opacity: 0;
+          -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          -webkit-transform: scale(1.01, 1.01);
+          transform: scale(1.01, 1.01);
+        }
+
+        .box:hover::after {
+          opacity: 1;
         }
 
         .card h3 {
