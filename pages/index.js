@@ -11,7 +11,9 @@ export default function Home() {
       <main>
         <h1 className="title">
           Bem-vindo ao <br></br>
-          <a>Meu Site Pessoal</a>
+          <Link href="/">
+            <a>Meu site Pessoal</a>
+          </Link>
         </h1>
 
         <p className="description">
@@ -19,12 +21,9 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentação &rarr;</h3>
-            <p>
-              Encontre informações mais detalhadas sobre as features do Next.js
-              e API.
-            </p>
+          <a href="/" className="card">
+            <h3>MyBio &rarr; (Em breve)</h3>
+            <p>Site experimental da minha Bio</p>
           </a>
 
           <a href="https://nextjs.org/learn" className="card">
@@ -33,7 +32,7 @@ export default function Home() {
           </a>
 
           <a href="#" className="card">
-            <h3>Sobre &rarr;</h3>
+            <h3>Sobre &rarr; (Em breve)</h3>
             <p>Em breve...</p>
           </a>
 
@@ -69,7 +68,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-image: linear-gradient(to bottom right, #ffd89b, #19547b);
+          background-image: linear-gradient(to bottom right, #000000, #19547b);
         }
 
         main {
@@ -79,6 +78,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          color: white;
         }
 
         footer {
@@ -148,17 +148,15 @@ export default function Home() {
           font-size: 1.4rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+          color: #060606;
         }
 
         .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-height: 1000px;
-          max-width: 1000px;
-          margin-top: 3rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 16px;
+          grid-row-gap: 16px;
+          max-width: 50rem;
         }
 
         .card {
@@ -200,6 +198,8 @@ export default function Home() {
         .card:active {
           -webkit-transform: scale(1.01, 1.01);
           transform: scale(1.01, 1.01);
+          background-image: linear-gradient(to top left, #19547b, #ff8800);
+          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .box:hover::after {
@@ -226,21 +226,6 @@ export default function Home() {
             width: 100%;
             flex-direction: column;
           }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
         }
       `}</style>
     </div>
