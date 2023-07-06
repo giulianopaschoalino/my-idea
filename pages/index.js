@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className="title">
           Bem-vindo ao <br></br>
           <Link href="/">
-            <a>Meu site pessoal</a>
+            <a>Meu site pessoal!</a>
           </Link>
         </h1>
 
