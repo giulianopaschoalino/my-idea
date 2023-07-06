@@ -11,9 +11,9 @@ export default function Home() {
       <main>
         <h1 className="title">
           Bem-vindo ao <br></br>
-          <Link href="/">
-            <a>Meu site pessoal!</a>
-          </Link>
+          <a href="/">
+            Meu site pessoal!
+          </a>
         </h1>
 
         <p className="description">
