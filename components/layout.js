@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Foot from "next/foot";
+// import Foot from "next/foot";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
@@ -25,7 +25,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Foot>
+      {/* <Foot>
         <a
           href="/"
           target="_blank"
@@ -34,7 +34,7 @@ export default function Layout({ children, home }) {
           Proporcionado por{" "}
           <img src="/logo.png" alt="Logo de Giuliano" className="logo" />
         </a>
-      </Foot>
+      </Foot> */}
       <header className={styles.header}>
         {home ? (
           <>
