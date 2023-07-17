@@ -24,6 +24,16 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Foot>
+        <a
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Proporcionado por{" "}
+          <img src="/logo.png" alt="Logo de Giuliano" className="logo" />
+        </a>
+      </Foot>
       <header className={styles.header}>
         {home ? (
           <>

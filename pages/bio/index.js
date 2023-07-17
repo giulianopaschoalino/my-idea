@@ -10,12 +10,12 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <a href="/" className="card">
-          <p>Home &larr;</p>
+          <d>Home &larr;</d>
         </a>
-        <h1>[Your Self Introduction]</h1>
+        <h1>Cristão, 25 anos, autodidata.</h1>
         <p>
-          (This is a sample website - build a site like this on{' '}
-          <a href="https://nextjs.org/learn">Next.js</a>.)
+          Estou tentando aprender a escrever um site em Next.js e otimizá-lo para ser o mais performático possível{' '}
+          <a href="https://nextjs.org/learn">Next.js</a>.
         </p>
       </section>
     </Layout>

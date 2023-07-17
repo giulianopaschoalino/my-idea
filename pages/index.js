@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
+        <meta name="ahrefs-site-verification" content="f7409f647df7c97cd90546cbe3a22752ad8ed2534bbf9dd25dcc204a1ef6a640"></meta>
         <title>Home - Giuliano</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -21,7 +22,7 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <a href="/" className="card">
+          <a href="bio" className="card">
             <h3>MyBio &rarr; (Em breve)</h3>
             <p>Site experimental da minha Bio</p>
           </a>
@@ -31,7 +32,7 @@ export default function Home() {
             <p>Aprenda sobre Next.js em um curso interativo com quizzes!</p>
           </a>
 
-          <a href="#" className="card">
+          <a href="/" className="card">
             <h3>Sobre &rarr; (Em breve)</h3>
             <p>Em breve...</p>
           </a>
@@ -51,7 +52,7 @@ export default function Home() {
 
       <footer>
         <a
-          href="https://stofella.vercel.app"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
